@@ -1,0 +1,19 @@
++------------------+
+|   INTRODUCTION   |
++------------------+
+
+Je m'appelle Sarah HAUTOT, ai j'ai passé cette année ma première année de BUT Informatique.
+Je suis pas arrivé dans le BUT au hasard : en effet, j'avais mis l'IUT du Havre en tant que premier voeu sur ParcourSup pour une raison.
+
+Il y a maintenant deux ans, j'ai pu commencé à programmer sur autre chose que Scratch, mais toujours avec la même logique.
+
+En effet, faisant partie d'une classe d'STI2D avec l'option SIN, j'ai eu la chance d'apprendre la programmation sur Arduino, qui on pu rendre possible certaine création.
+
+Passant d'une simple LED qui s'allume avec un boutton, a la création de voiture pour une course avec un ami et la création d'un Tank pour amuser mes frères, 
+je peux sans aucun doute dire que j'appreciais la programmation, et que je m'améliorais sans problème.
+
+Un de mes professeur, en voyant ceux-ci, m'a proposait de poursuivre mes études dans un BUT Informatique.
+
+Etrangement, cherchez un BUT n'est pas mince affaire : j'avais un moyen financier un peu limité, donc je pouvais pas partir partout.
+
+En parlant avec mon ami de ce problème, celui m'a parlé de l'IUT du Havre, 
