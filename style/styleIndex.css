@@ -1,62 +1,132 @@
-body
+/*---------------------------------------*/
+/*                GENERAL                */
+/*---------------------------------------*/
+
+@font-face 
 {
-	background-image: url('../images/Fond.png');
-    background-size: cover;
-    background-attachment: fixed;
-	display: grid;
-	grid-template-columns: 59% 40%;
-	grid-gap: 10px;
+	font-family: 'Test';
+	src: url('../src/Righteous-Regular.ttf') format('truetype');
 }
 
-/* Styles pour la section "Introduction" */
-#INTRODUCTION 
+  body
 {
-	height: 95vh;
-	margin : 1vf;
+	background-image: url('../src/bg.jpg');
+	background-size: cover;
+	background-attachment: fixed;
 }
 
-#INTRODUCTION article
+/*---------------------------------------*/
+/*                HEADER                 */
+/*---------------------------------------*/
+
+header 
 {
-	background-color: gainsboro;
-	border-radius: 10%;
-	padding: 20px;
+	color : white;
+	font-family: 'Test', sans-serif;
+
+	position: absolute;
+	top: 65%;
+	left : 5%;
 }
 
-/* Styles pour la section "Compétences" */
-#COMPETENCES 
+h1
 {
-	display: grid;
-	grid-template-columns: repeat(2,1fr);
-	grid-gap: 30px;
-	margin : 1vf;
-	height: 95vh;
+	font-size     : 80px;
+	margin-bottom : -20px;
 }
 
-.comp 
+
+/*---------------------------------------*/
+/*             NAVIGATION 1              */
+/*---------------------------------------*/
+
+/* Base */
+nav 
 {
-	border-radius: 15px;
-	padding: 20px;
+	background-color: #f2f2f2;
+
+	position: absolute;
+	bottom: 0;
+	left : 0;
+	width : 100%;
+}
+  
+nav ul 
+{
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
 	display: flex;
-	justify-content: center;
-	align-items: center;
-	text-align: center; /* Centrer le texte horizontalement */
-	border : 5px solid;
+}
+  
+nav li 
+{
+	flex: 1;
 }
 
-.comp a 
+/* Lien */
+nav a 
 {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
-	height: 100%;
+	display: block;
+	text-align: center;
+	padding: 10px;
 	text-decoration: none;
-	color: inherit;
+	color: #222;
+
+	-moz-transition: all 1.5s; 
+	-webkit-transition: all 1.5s; 
+	-o-transition: all 1.5s; 
+	transition: all 1.5s;
 }
 
-#c1 { background-color: #FFADAD; border-color: #FF9D9D;}
-#c2 { background-color: #FFD6A5; border-color: #FFC695;}
-#c3 { background-color: #FDFFB6; border-color: #FDFFA6;}
-#c4 { background-color: #CAFFBF; border-color: #BAFFAF;}
-#c5 { background-color: #A0C4FF; border-color: #90B4FF;}
-#c6 { background-color: #BDB2FF; border-color: #ADA2FF;}
+nav a:hover 
+{
+	-moz-transition: all .5s; 
+	-webkit-transition: all .5s; 
+	-o-transition: all .5s; 
+	transition: all .5s;
+}
+
+
+/* Couleurs  */
+nav li:nth-child(1) a:hover { background-color : #ffa1a1; }
+nav li:nth-child(2) a:hover { background-color : #ff9b58; }
+nav li:nth-child(3) a:hover { background-color : #a8b8ff; }
+
+
+
+/*---------------------------------------*/
+/*             NAVIGATION 2              */
+/*---------------------------------------*/
+
+#MENUDER 
+{
+	display: none;
+	position: absolute;
+	transform: translateY(-100%); 
+	top       : 0;
+}
+
+nav li:hover > ul#MENUDER,
+nav li ul#MENUDER:hover 
+{
+  display: block;
+}
+
+#MENUDER 
+{
+	background-color: #f2f2f2;
+	width           : 33.3%;
+}
+  
+#MENUDER a 
+{
+	text-align: left;
+}
+
+#MENUDER li:nth-child(1) a:hover { background-color : #d880ee; }
+#MENUDER li:nth-child(2) a:hover { background-color : #A0C4FF; }
+#MENUDER li:nth-child(3) a:hover { background-color : #98ec87; }
+#MENUDER li:nth-child(4) a:hover { background-color : #fcf193; }
+#MENUDER li:nth-child(5) a:hover { background-color : #FFD6A5; }
+#MENUDER li:nth-child(6) a:hover { background-color : #FFADAD; }
