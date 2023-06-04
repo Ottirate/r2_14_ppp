@@ -1,3 +1,3 @@
 # Mon Portfolio 
 
-## Cliqué sur le lien suivant pour avoir accés à la page !
+(Cliquez ici pour tous voir !) [https://ottirate.github.io/r2_14_ppp/]
