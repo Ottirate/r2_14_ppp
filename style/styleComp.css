@@ -6,8 +6,9 @@
 
 body
 { 
-	background: linear-gradient(to right,#333, #111);
-	color     : white;
+	background  : linear-gradient(to right,#333, #111);
+	color       : white;
+	font-family : sans-serif;
 }
 
 header
@@ -77,6 +78,47 @@ footer
 	text-align: right;
 	padding-bottom: 15px;
 	color: #333;
+	font-size: small;
+}
+
+table
+{
+	width: 70%;
+}
+
+table table
+{
+	width: 50%;
+	text-align: left;
+}
+
+table table td
+{
+	width : 5%;
+}
+
+thead, tfoot 
+{
+	text-align: center;
+}
+  
+table table, table table th, table table td 
+{
+	border-collapse: collapse; 
+	border: 2px solid white;
+	padding: 5px;
+	width: 100%;
+	/* margin: 0px; */
+}
+
+table table tr
+{
+	height: 35px;
+}
+
+table table tfoot
+{
+	text-align: left;
 }
 
 h2

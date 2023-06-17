@@ -13,6 +13,7 @@
 	background-image: url('../src/bg.jpg');
 	background-size: cover;
 	background-attachment: fixed;
+	font-family : sans-serif;
 }
 
 /*---------------------------------------*/
@@ -49,6 +50,8 @@ nav
 	bottom: 0;
 	left : 0;
 	width : 100%;
+
+	font-weight: bold;
 }
   
 nav ul 
@@ -104,6 +107,7 @@ nav li:nth-child(3) a:hover { background-color : #a8b8ff; }
 	display: none;
 	position: absolute;
 	transform: translateY(-100%); 
+	font-weight: normal;
 	top       : 0;
 }
 

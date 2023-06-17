@@ -1,30 +1,47 @@
+/* Couleur Compétences 1 */
+#C1 header             { border-color     : #eb3636; }
+#C1 article            { border-color     : #eb3636; }
+#C1 h2                 { border-color     : #eb3636; }
+#C1 h1                 { color            : #eb3636; }
+#C1 a                  { color            : #eb3636; }
+#C1 table table thead  { background-color : #eb3636; }
 
-
+/* Couleur Compétences 2 */
+#C2 header             { border-color     : #ec882b; }
+#C2 article            { border-color     : #ec882b; }
+#C2 h2                 { border-color     : #ec882b; }
+#C2 h1                 { color            : #ec882b; }
+#C2 a                  { color            : #ec882b; }
+#C2 table table thead  { background-color : #ec882b; }
 
 /* Couleur Compétences 3 */
-#C3 header  { border-color : #f6fc5a; }
-#C3 article { border-color : #f6fc5a; }
-#C3 h2      { border-color : #f6fc5a; }
-#C3 h1      { color        : #f6fc5a; }
-#C3 a       { color        : #f6fc5a; }
+#C3 header             { border-color     : #ebd726; }
+#C3 article            { border-color     : #ebd726; }
+#C3 h2                 { border-color     : #ebd726; }
+#C3 h1                 { color            : #ebd726; }
+#C3 a                  { color            : #ebd726; }
+#C3 table table thead  { background-color : #ebd726; }
 
 /* Couleur Compétences 4 */
-#C4 header  { border-color : #5edf52; }
-#C4 article { border-color : #5edf52; }
-#C4 h2      { border-color : #5edf52; }
-#C4 h1      { color        : #5edf52; }
-#C4 a       { color        : #5edf52; }
+#C4 header             { border-color     : #5edf52; }
+#C4 article            { border-color     : #5edf52; }
+#C4 h2                 { border-color     : #5edf52; }
+#C4 h1                 { color            : #5edf52; }
+#C4 a                  { color            : #5edf52; }
+#C4 table table thead  { background-color : #5edf52; }
 
 /* Couleur Compétences 5 */
-#C5 header  { border-color : #4d81f0; }
-#C5 article { border-color : #4d81f0; }
-#C5 h2      { border-color : #4d81f0; }
-#C5 h1      { color        : #4d81f0; }
-#C5 a       { color        : #4d81f0; }
+#C5 header             { border-color     : #4d81f0; }
+#C5 article            { border-color     : #4d81f0; }
+#C5 h2                 { border-color     : #4d81f0; }
+#C5 h1                 { color            : #4d81f0; }
+#C5 a                  { color            : #4d81f0; }
+#C5 table table thead  { background-color : #4d81f0; }
 
 /* Couleur Compétences 6 */
-#C6 header  { border-color : #b325d6; }
-#C6 article { border-color : #b325d6; }
-#C6 h2      { border-color : #b325d6; }
-#C6 h1      { color        : #b325d6; }
-#C6 a       { color        : #b325d6; }
+#C6 header             { border-color     : #b325d6; }
+#C6 article            { border-color     : #b325d6; }
+#C6 h2                 { border-color     : #b325d6; }
+#C6 h1                 { color            : #b325d6; }
+#C6 a                  { color            : #b325d6; }
+#C6 table table thead  { background-color : #b325d6; }
