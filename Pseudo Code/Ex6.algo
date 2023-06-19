@@ -1,0 +1,58 @@
+ALGORITHME Arene
+	constante :
+		NB_ORIENT ¬ 8
+	variables :
+		direction       : Tableau [NB_ORIENT] de chaine
+		wallE           : Robot 
+		nbDepla         : entier
+		
+		coinA1,coinA8   : booléen
+		coinH1,coinH8   : booléen 
+
+DEBUT
+
+	wallE ¬ nouveau Robot (hasard(8)+1, car(ord('A') + hasard(8), "jaune",'w' )
+	
+	direction ¬ {"N","NO","O","SO","S","SE","E","NE"}
+	coinA1 ¬ coinA8 ¬ coinH1 ¬ coinH8 ¬ faux 
+	nbDepla ¬ 0
+	
+	tq !(coinA1 ET coinA8 ET coinH1 ET coinH8) faire
+		
+		//Direction au hasard
+		direct ¬ hasard(NB_ORIENT)
+		public 
+		//On vas dans cette direction autant de fois qu'on le peut
+		tq (wallE.deplacer(direction[direct], faux)) faire
+			nbDepla++
+		ftq
+		
+		//On regarde si on est dans un coin
+		si wallE.getColonne = 'A' alors
+		
+			si wallE.getLigne = 1 alors
+				coinA1 ¬ vrai
+			fsi
+			
+			si wallE.getLigne = 8 alors
+				coinA8 ¬ vrai
+			fsi
+			
+		fsi
+		
+		si wallE.getColonne = 'H' alors
+		
+			si wallE.getLigne = 1 alors
+				coinH1 ¬ vrai
+			fsi
+			
+			si wallE.getLigne = 8 alors
+				coinH8 ¬ vrai
+			fsi
+		fsi
+		
+	ftq
+	
+	écrire (nbDepla)
+
+FIN 

@@ -1,0 +1,67 @@
+ALGORITHME CaptureRobot
+	Variable: 
+		tabRobot            : Tableau [5] de Robot
+		orient              : Tableau [4] de chaine
+		
+		ligSaisie           : entier
+		colSaisie           : caractère
+		orientSaisie        : chaine
+		
+		numRobot            : entier
+		cpt                 : entier
+		
+		nbTour              : entier
+		estAttrapé          : booléen 
+DEBUT 
+
+	//Déclaration Robot	
+	tabRobot[0] ¬ nouveau Robot (6,'D', "bleu",  '0')
+	tabRobot[1] ¬ nouveau Robot (1,'B', "rouge", 'R')
+	tabRobot[2] ¬ nouveau Robot (2,'C', "rouge", 'R')
+	tabRobot[3] ¬ nouveau Robot (2,'F', "rouge", 'R')
+	tabRobot[4] ¬ nouveau Robot (1,'G', "rouge", 'R')
+	
+	orient      ¬ ("N","O","S","E")
+	
+	//Déplacer les robot rouge.
+	nbTour ¬ 0
+	tq nbTour < 20 et !estAttrapé faire
+		
+		//Utilisateur, savoir quel robot
+		lire (ligSaisie, colSaisie)
+		
+		cpt ¬ 1
+		tq cpt <= 4 faire
+			
+			si ( tabRobot[cpt].getLigne() = ligSaisie et tabRobot[cpt].getColonne() = colSaisie) alors
+				numRobot ¬ cpt
+			fsi
+			
+			cpt++
+		ftq
+		
+		//Utilisateur, lire direction et retourner en arriere si robot présent
+		lire (orientSaisie)
+		
+		tabRobot[numRobot].deplacer ( orientSaisie,faux)
+		
+		si tabRobot[numRobot].estCondondu( tabRobot[0] ) et cpt != numRobot alors 
+			estAttrapé ¬ vrai
+		fsi
+		
+		cpt ¬ 1
+		tq cpt <= 4 faire
+			
+			si tabRobot[numRobot].estCondondu( tabRobot[cpt] ) alors 
+				tabRobot[numRobot].deplacer( appel DirectionOpposee(orientSaisie), faux )
+			fsi
+			
+			cpt++
+		ftq
+		
+		tabRobot[0].deplacer(orient[hasard(4)], vrai)
+		
+		nbTour ++
+	ftq 
+	
+	

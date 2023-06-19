@@ -1,0 +1,37 @@
+ALGORITHME DeuxRobot
+
+	variables :
+		wallE,eve        : Robot
+		etat             : Chaine de caractère 
+
+DEBUT
+	
+	eve   ¬ nouveau Robot ( 6, 'E', "blanc", 'E')
+	wallE ¬ nouveau Robot ( 2, 'D', "jaune", 'W')
+	
+	//Affichage de l'atat de Eve
+	etat ¬ "Robot "         © eve.getCouleur() © " (" © eve.getNom() © ") "  ©
+	        "positionné en " © eve.getColonne() © enChaine ( eve.getLigne() ) © 
+			" (" © enChaine( eve.getPosX() ) © ":" © enChaine( eve.getPosY()) ©
+			") "
+ 	écrire ( etat )
+	
+	//Affichage de l'atat de WallE
+	etat ¬ "Robot "         © wallE.getCouleur() © " (" © wallE.getNom() © ") "  ©
+	        "positionné en " © wallE.getColonne() © enChaine ( wallE.getLigne() ) © 
+			" (" © enChaine( wallE.getPosX() ) © ":" © enChaine( wallE.getPosY()) ©
+			") "
+ 	écrire ( etat )
+	
+	//Deplacement de Eve
+	eve.deplacer(   "S" , vrai )
+	eve.deplacer(   "S" , vrai )
+	eve.deplacer(   "S" , vrai )
+	
+	//Deplacement de WallE
+	wallE.deplacer( "S0", faux )
+	wallE.deplacer( "S" , faux )
+	wallE.deplacer( "S" , faux )
+	
+	
+FIN

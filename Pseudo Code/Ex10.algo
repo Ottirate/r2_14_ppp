@@ -1,0 +1,95 @@
+ALGORITHME LesTroisPots
+	Variable:
+		tabPot          : Tableau [3] de Pot
+		potUser         : Pot
+		potUser2        : Pot
+		
+		contenance      : entier
+		potSaisie       : caractère
+		actionSaisie    : caractère
+		
+		quantiteFinal   : entier
+		nbTour          : entier
+		
+DEBUT
+
+	lire(contenance)
+	tabPot[0] = nouveau Pot('A', contenance)
+	
+	lire(contenance)
+	tabPot[1] = nouveau Pot('B', contenance)
+	
+	tabPot[2] = nouveau Pot('C', 1000)
+	
+	//Début de la partie
+	lire(quantiteFinal)
+	nbTour ¬ 0
+	tq (tabPot[2].getContenue < quantiteFinal et nbTour < 100)
+		
+		lire(potSaisie, actionSaisie)
+		
+		//On prend le pot qui fait l'action
+		potUser = tabPot[ord(potSaisie) - ord(A)]
+		
+		si estEntier(actionSaisie)
+		
+			si actionSaisie = '1' alors
+				potUser.ajouter(potUser.getLibre())
+			fsi
+				
+			si actionSaisie = '0' alors
+				potUser.jeter()
+			fsi
+			
+		sinon	
+		
+			//On prend le pot qui recois
+			potUser2      ¬ tabPot[ord(actionSaisie)-ord(A)]
+			
+			si potUser2.getLibre < potUser.getContenue() alors
+				potUser.enlever(potUser2.getLibre())     //j'enlève ce que je peux transférer
+				potUser2.ajouter(potUser2.getLibre())    //j'ajoute ce que j'ai transférer
+			sinon
+				potUser2.ajouter(potUser.getContenue())  //j'ajoute le contenue
+				potUser.jeter()                          //je vide
+			fsi
+					
+		fsi
+		
+		nbTour++
+	ftq
+	
+	
+	//Affichage Résultats
+	si tabPot[2].getContenue = quantiteFinal alors //Si gagné
+		écrire("Gagnez en : ",nbTour," tours") 
+		
+	sinon                                          //Si perdu
+		
+		si tabPot[2].getContenue > quantiteFinal alors
+			écrire("Perdu, la quantite final à était dépassé")
+		sinon
+			écrire("Perdu, vous avez dépassé le nombre de tour maximum") 
+		fsi
+	
+	fsi
+	
+
+FIN
+		
+		
+
+
+"¬ £ ³ ¹ · ± - ® Ö p  "
+¬ £ ³ ¹ · ± - ® Ö p  
+¬ : 170  
+£  : 156  
+³  : 0179 
+¹  : 251  
+·  : 250   
+±  : 0177 
+-  : 45
+® : 169 
+Ö  : 153
+p  : 112 
+  : 

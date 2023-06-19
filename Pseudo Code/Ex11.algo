@@ -1,0 +1,199 @@
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*                                                                                          PARTIE 1                                                                                       */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+ALGORITHME Chaine1
+	Variable:
+		sp1        : StringP
+		pos        : entier
+		
+		chaineUser : chaine de caractère
+		
+DEBUT
+	
+	lire(chaineUser)
+	
+	sp1 ¬ nouveau StringP(chaineUser)
+	
+	lire (pos)
+	écrire (sp1.obtenir(pos))
+	
+FIN
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*                                                                                          PARTIE 2                                                                                       */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+ALGORITHME Chaine2
+	Variable:
+		sp1,sp2    : StringP
+		
+		chaineUser : chaine de caractère
+		
+DEBUT
+	
+	lire(chaineUser)
+	sp1 ¬ nouveau StringP(chaineUser)
+	
+	lire(chaineUser)
+	sp2 ¬ nouveau StringP(chaineUser)
+	
+	
+	si sp1.longueur() = sp2.longueur() alors
+		écrire("Les phrases sont de la même longueur")
+		
+		si sp1.égal(sp2) alors 
+			écrire("Les phrases sont identiques")
+		fsi
+		
+	sinon
+		écrire("Les phrases ne sont pas de la même longueur")
+	fsi
+	
+FIN
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*                                                                                          PARTIE 3                                                                                       */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+ALGORITHME Chaine3
+	Variable:
+		sp1,sp2    : StringP
+		
+		car1,car2  : caractère 
+		
+		cpt        : entier
+		
+DEBUT
+	
+	lire(ch)
+	sp1 ¬ nouveau StringP(ch)
+	
+	lire (car1, car2)
+	sp2 ¬ nouveau StringP("")
+	
+	cpt ¬ 0
+	tq cpt < sp1.longueur() faire
+	
+		si sp1.obtenir(cpt) = car1 alors 
+			sp2 ¬ nouveau StringP(sp2.concatener(car2))
+		sinon 
+			sp2 ¬ nouveau StringP(sp2.concatener(sp1.obtenir(cpt)))
+		fsi
+		
+		cpt++
+	ftq
+	
+FIN
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*                                                                                          PARTIE 4                                                                                       */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+ALGORITHME Palindrome
+	Variable:
+		sp1,sp2,sp3  : StringP
+		ch1,ch2      : chaine de caractère
+		
+		cpt          : entier
+		
+DEBUT
+	
+	lire(ch1)
+	sp1 ¬ nouveau StringP(ch1)
+	
+	ch1 ¬ ch2 ¬ ""
+	
+	cpt ¬ 0
+	tq cpt < sp1.longueur() faire
+	
+		si non(sp1.obtenir(cpt) = '.' ou sp1.obtenir(cpt) = '!' ou sp1.obtenir(cpt) = ' ' ou sp1.obtenir(cpt) = ',' ou 
+		        sp1.obtenir(cpt) = '?' ou sp1.obtenir(cpt) = ';' ou sp1.obtenir(cpt) = ':' ou sp1.obtenir(cpt) = ''') alors 
+			ch1 ¬ ch1               sp1.obtenir(cpt)
+			ch2 ¬ sp1.obtenir(cpt)  ch2
+		fsi
+		
+		cpt++
+	ftq
+	
+	sp1 ¬ nouveau StringP(ch1)
+	sp2 ¬ nouveau StringP(ch2)
+	
+	si sp1.égal(sp2) alors
+		écrire ("Cette chaine est un Palindrome")
+	fsi 
+	
+	
+FIN
+
+
+
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+/*                                                                                          PARTIE 5                                                                                       */
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
+ALGORITHME Chaine5
+	Variable:
+		sp1,sp2      : StringP
+		ch1,ch2      : chaine de caractère
+		
+		
+		
+DEBUT
+	
+	lire (ch1, ch2)
+	
+	sp1  ¬ nouveau StringP (ch1)
+	sp2  ¬ nouveau StringP (ch2)
+	
+	écrire ( appel LettresNonCommun(sp1,sp2) )
+	écrire ( appel LettresNonCommun(sp2,sp1) )
+	
+FIN
+
+ALGORITHME LettresNonCommun ( e sp1    : StringP
+                              e sp2    : StringP ) ® chaine de caractère
+	Variable: 
+		estInconnue  : booléen
+		rep          : chaine de caractère
+		
+		cpt1,cpt2    : entier
+
+DEBUT
+
+	cpt1 ¬ 0
+	tq cpt1 < sp1.longueur() faire
+		
+		estInconnue ¬ vrai  
+		cpt2 ¬ 0
+		tq cpt2 < sp2.longueur() et estInconnue faire 
+			
+			si sp1.obtenir(cpt1) = sp2.obtenir(cpt2)
+				estInconnue ¬ faux
+			fsi
+			cpt2++
+		ftq
+		
+		si estInconnue alors
+			rep ¬ rep  sp1.obtenir(cpt1)
+		fsi
+		
+		cpt1++
+	ftq
+	
+	retourne rep 
+	
+FIN 
+
+
+
+
+¬ £ ³ ¹ · ± - ® Ö p  

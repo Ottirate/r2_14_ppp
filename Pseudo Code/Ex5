@@ -1,0 +1,17 @@
+ALGORITHME TestPersonne
+	constante :
+		
+	variables :
+		age            : entier
+		liste          : Tableau de []
+		
+DEBUT
+	
+	nouveau Personne ("Golade", "Larry", 38)
+	nouveau Personne ("Khal"  , "Medhi"    )
+	
+	écrire 
+	lire (age)
+	
+	
+FIN 

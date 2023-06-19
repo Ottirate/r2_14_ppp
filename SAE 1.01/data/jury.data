@@ -1,0 +1,33 @@
+Nom	Prénom	Groupe	Catégorie
+Age	Karl	A	C
+Assain	Marc	A	A
+Assion	Dave	A	C
+Ateur	Nordine	C	C
+Bambelle	Larry	A	A
+Bricot	Judas	B	B
+Camant	Medhi	D	A
+Copterre	Eli	B	B
+Cover	Harry	D	A
+Cratif	Luc	C	C
+Culaire	Laury	C	B
+Delune	Claire	B	A
+Dizan	Adam	C	B
+Don Devello	Guy	D	B
+Dunord	Edgar	D	B
+Faire	Lucie	D	B
+
+4
+702	113
+705	4
+707	3
+724	4
+727	3
+729	3
+731	3
+
+20	5
+jury 1	618	19/01/2023	08:00	09:00	Mme Boukachour	M. Laffeach	M. Le Pivert	M. Legrix
+jury 2	618	19/01/2023	09:30	11:30	Mme Boukachour	M. Legrix
+jury 3	616	19/01/2023	09:30	11:30	M. Laffeach	M. Le Pivert
+jury 5	618	20/01/2023	09:00	11:00	Mme Boukachour	M. Le Pivert
+jury 6	616	20/01/2023	09:00	11:00	M. Laffeach	M. Legrix

@@ -1,0 +1,27 @@
+ALGORITHME 	TransferePot
+	Variable:
+		potPetit, potGrand       : Pot
+		
+		nbTrans                  : entier
+		litre                    : entier
+		
+		estTransvidable          : booléen
+		
+		
+DEBUT 
+
+	potPetit ¬ nouveau Pot ('P', 5  );
+	potGrand ¬ nouveau Pot ('G', 111);
+	
+	potPetit.ajouter(potPetit.getLibre)
+	nbTrans  ¬ 0
+	
+	tq potGrand.ajouter(potPetit.vider()) faire
+		
+		potPetit.ajouter(potPetit.getLibre)
+		nbTrans++
+		
+	ftq
+	
+	écrire (nbTrans, potGrand.getContenu())
+FIN

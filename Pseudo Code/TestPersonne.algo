@@ -1,0 +1,34 @@
+ALGORITHME TestPersonne
+	Constante:
+		TAILLE ¬ 100
+	Variable:
+		age              : entier
+		
+		tablePers        : Tableau [TAILLE] de Personne
+		nbPers           : entier 
+		
+DEBUT
+	
+	
+	
+	tablePers[0] ¬ nouveau Personne ("Galade","Larry", 38)
+	tablePers[1] ¬ nouveau Personne ("Khal","Medhi")
+	nbPers       ¬ 2
+	
+	lire(age)
+	tablePers[1].setAge(age)
+	
+	écrire(tablePers[0].toString())
+	écrire(tablePers[1].toString())
+	
+	si tablePers[0].estPlusAge(tablePers[1]) alors
+		écrire(tablePers[0].getNom + " est plus agé" )
+	sinon
+		si tablePers[1].estPlusAge(tablePers[0]) alors
+			écrire(tablePers[1].getNom + " est plus agé" )
+		sinon
+			écrire("Ils ont le même âge.")
+		fsi
+	fsi
+
+FIN 
