@@ -8,7 +8,7 @@
 	</head>
 	<body id = "C1">
 		<header>
-			<h1> Différents TP sur le DEV Objet </h1>
+			<h1> SAE 1.01 </h1>
 		</header>
 
 		<a href = "../lstProjets.html">
@@ -18,8 +18,9 @@
 		</a>
 
 		<section>
-			<h2 id ="TRAIN">Générations de groupe et d'emploie du temps</h2>
+			<h2>Générations de groupe et d'emploie du temps</h2>
 			<article>
+				<h3> Situation </h3>
 				<p> 
 					Une SAE relié à d'autre SAE, celle-ci consisté à la réalisation de fichier java qui permet la lecture de différents data,
 					du traitement de ses informations afin de crée un emploie du temps.
@@ -30,6 +31,10 @@
 					mais j'ai aussi fait la génération d'une des pages WEB. <br>
 					J'ai donc quand même fait une bonne partie du travail.
 				</p>
+			</article>
+			
+			<article>
+				<h3> Lecture et enregistrement de données </h3>
 				<p>
 					Les fichiers data n'était pas très complexe à lire et les informations entré était assurer d'être juste. <br>
 					Dans l'avenir, je sais que ce genre de donnée deveront être corriger pour éviter certain bug, mais pour l'instant, ce n'est 
@@ -37,7 +42,10 @@
 				</p>
 
 				<img src ="../src/SAE101-Data.png" alt = "data remplie d'information">
-
+			</article>
+			
+			<article>
+				<h3> Traitement des données </h3>
 				<p> 
 					La lecture et enregistrement des données une fois fait, il était maintenant temps de les traités. Cette partie à était possible
 					grace à la réalisation de multiple classe java : un total de 8 classes.
@@ -46,7 +54,28 @@
 				<img src="../src/treeSAE101.png" alt = "Arbre de tous les fichiers">
 
 				<p>
-					Pour voir le code en entier, n'hésitez pas à aller sur répértoire git <a href =""> TP-SNCF</a>.
+					Ces classes nous ont permis de former des groupes, de les placer dans des salles et de les faire passer avec un jury donnée.
+					Cette générations de groupes, jury, etc... dépends des données du data : les jurys peuvent être différents, ainsi que leur crénaux de passage
+					la durée de leur oraux, de leur temps de pause, des salles disponible etc...
+				</p>
+			</article>
+			
+			<article>
+				<h3> Affichage des données </h3>
+				<p>
+					Parmis ces 8 classes, 3 d'entre eux sont réservès pour la génération des résultats afin de communiquer plus facilement nos données
+					à l'utilisateur (ce sont les classes qui commences par <i>list</i>). <br>
+					Ces informations génèrent des pages Web que doit manuellement lancer l'utilisateur. Cette SAE a été retravailler légérement durant la 
+					SAE 2.03 afin de faire en sorte que l'utilisateur puisse directement visualiser ses données sur un navigateur internet. <br>
+					Les pages ne paient pas de mine, mais il est important de garder en tête que cela est un vieux projets datant de l'année dernière.
+				</p>
+
+				<img class = "redimensionner" src = "../src/SAE101-PageListeEtud.png"   alt ="Page liste des étudiants">
+				<img class = "redimensionner" src = "../src/SAE101-PageListeEquipe.png" alt ="Page liste des équipes  ">
+				<img class = "redimensionner" src = "../src/SAE101-PageListeJury.png"   alt ="Page liste des jurrys   ">
+
+				<p>
+					Pour voir le code en entier, n'hésitez pas à aller sur répértoire git <a href =""> SAE 1.01 </a>.
 				</p>
 			</article>
 		</section>
